@@ -1,0 +1,21 @@
+<head>
+{%include 'bootstrap.html'%}
+</head>
+<h4>Send me Massage </h4>
+<from action='/message_submitted' method='post'>
+<div>
+<label> Full name</label><br>
+<input type='text' name='full name' placeholder='Ahmed Alasmari'>
+</div>
+
+  <div>
+  <label>Email</label><br>
+  <input type='text' name='email' placeholder='AhmedAlasmari@gmail.com'>
+  </div>
+
+  <div>
+<label>Message</label><br>
+  <textarea type='text' name='message'></textarea>
+  </div>
+<input type='submit'>
+</from>
