@@ -1,21 +1,26 @@
-<head>
-{%include 'bootstrap.html'%}
-</head>
-<h4>Send me Massage </h4>
-<from action='/message_submitted' method='post'>
-<div>
+<html>
+  <head>
+    {%include 'bootstrap.html'%}
+  </head>
+  <body>
+    {% include 'banner.html' %}
+<h4>Send me a Massage </h4>
+<form action='/message_submitted' method='post'>
+<div class="mb-2">
 <label> Full name</label><br>
-<input type='text' name='full name' placeholder='Ahmed Alasmari'>
+<input type='text' name='full_name' placeholder='Ahmed Alasmari'>
 </div>
 
-  <div>
+  <div class="mb-2">
   <label>Email</label><br>
   <input type='text' name='email' placeholder='AhmedAlasmari@gmail.com'>
   </div>
 
-  <div>
+  <div class="mb-2">
 <label>Message</label><br>
   <textarea type='text' name='message'></textarea>
   </div>
-<input type='submit'>
+  <input type="submit" value="Send">
 </from>
+  </body>
+</html>

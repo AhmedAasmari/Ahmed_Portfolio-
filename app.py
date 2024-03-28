@@ -3,8 +3,8 @@ from database import load_projects_from_db, load_project_from_db, add_message_to
 
 app = Flask(__name__)
 
-
 @app.route("/")
+
 def hello_world():
   projects = load_projects_from_db()
   return render_template('home.html', projects=projects)
@@ -23,9 +23,9 @@ def message():
 
 @app.route("/message_submitted", methods=['POST'])
 def message_submitted():
-  mdata = request.form
-  add_message_to_db(mdata)
-  return render_template('message_submitted.html', data=mdata)
+  data = request.form
+  add_message_to_db(data)
+  return render_template('message_submitted.html', data=data)
 
 
 if __name__ == '__main__':

@@ -2,8 +2,10 @@
 <html>
   <head>
     <title>Your message submitted successfully</title>
+    {% include 'bootstrap.html'%}
   </head>
 <body>
+{% include 'banner.html' %}
   <h4>Full Name</h4>
   <div> {{data['full_name']}}</div>
   
